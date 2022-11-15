@@ -1,273 +1,68 @@
-[2022-10-29 14:13:45] [ ERROR] [main.Main:56] Tabla "ODONTOLOGOS" ya existe
-Table "ODONTOLOGOS" already exists; SQL statement:
-CREATE TABLE odontologos(matricula INT PRIMARY KEY, apellido VARCHAR(40), nombre VARCHAR(40)) [42101-214]
-[2022-10-29 14:16:45] [ ERROR] [main.Main:60] Tabla "ODONTOLOGOS" ya existe
-Table "ODONTOLOGOS" already exists; SQL statement:
-CREATE TABLE odontologos(matricula INT PRIMARY KEY, apellido VARCHAR(40), nombre VARCHAR(40)) [42101-214]
-[2022-10-29 14:17:31] [ ERROR] [main.Main:60] Tabla "ODONTOLOGO" no encontrada
-Table "ODONTOLOGO" not found; SQL statement:
-INSERT INTO odontologo VALUES(100, 'Ruiz', 'Martha') [42102-214]
-[2022-10-29 14:20:22] [ ERROR] [main.Main:60] Columna "id" no encontrada
-Column "id" not found [42122-214]
-[2022-10-29 14:21:37] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:21:37] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:21:37] [ ERROR] [main.Main:60] Tabla "ANIMALITOS" no encontrada
-Table "ANIMALITOS" not found; SQL statement:
-SELECT * FROM animalitos [42102-214]
-[2022-10-29 14:22:44] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:22:44] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:22:44] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:42:57] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:42:57] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:42:57] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:43:57] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:43:57] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:43:57] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:45:25] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:45:25] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:45:25] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:45:43] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:45:43] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:45:43] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:51:49] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:51:49] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:51:49] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:55:06] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:55:06] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:55:06] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:56:05] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:56:05] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:56:05] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:57:25] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:57:25] [ INFO ] [main.Main:78] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:57:25] [ INFO ] [main.Main:78] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:59:54] [ INFO ] [main.Main:80] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:59:54] [ INFO ] [main.Main:80] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:59:54] [ INFO ] [main.Main:80] Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-10-29 14:59:54] [ INFO ] [main.Main:80] Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-10-29 14:59:54] [ INFO ] [main.Main:80] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 14:59:54] [ INFO ] [main.Main:80] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 14:59:54] [ INFO ] [main.Main:80] Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-10-29 14:59:54] [ INFO ] [main.Main:80] Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-10-29 15:01:05] [ INFO ] [main.Main:80] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:01:05] [ INFO ] [main.Main:80] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 15:01:05] [ INFO ] [main.Main:80] Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-10-29 15:01:05] [ INFO ] [main.Main:80] Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-10-29 15:01:05] [ INFO ] [main.Main:80] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:03:44] [ INFO ] [main.Main:79] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:03:44] [ INFO ] [main.Main:79] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 15:03:44] [ INFO ] [main.Main:79] Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-10-29 15:03:44] [ INFO ] [main.Main:79] Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-10-29 15:03:44] [ INFO ] [main.Main:79] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:12:21] [ INFO ] [main.Main:84] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:12:21] [ INFO ] [main.Main:84] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 15:12:21] [ INFO ] [main.Main:84] Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-10-29 15:12:21] [ INFO ] [main.Main:84] Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-10-29 15:12:21] [ INFO ] [main.Main:84] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:12:21] [ INFO ] [main.Main:84] Odontologo{apellido='perez', nombre='Fer', matricula=101}
-[2022-10-29 15:17:06] [ INFO ] [main.Main:84] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:17:06] [ INFO ] [main.Main:84] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 15:17:06] [ INFO ] [main.Main:84] Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-10-29 15:17:06] [ INFO ] [main.Main:84] Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-10-29 15:17:06] [ INFO ] [main.Main:84] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:17:06] [ INFO ] [main.Main:84] Odontologo{apellido='Perez', nombre='Vivi', matricula=101}
-[2022-10-29 15:17:43] [ INFO ] [main.Main:85] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:17:43] [ INFO ] [main.Main:85] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 15:17:43] [ INFO ] [main.Main:85] Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-10-29 15:17:43] [ INFO ] [main.Main:85] Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-10-29 15:17:43] [ INFO ] [main.Main:85] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:17:43] [ INFO ] [main.Main:85] Odontologo{apellido='Perez', nombre='Vivi', matricula=101}
-[2022-10-29 15:17:43] [ INFO ] [main.Main:85] Odontologo{apellido='Garcia', nombre='Dani', matricula=102}
-[2022-10-29 15:51:17] [ INFO ] [main.Main:85] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:51:17] [ INFO ] [main.Main:85] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-10-29 15:51:17] [ INFO ] [main.Main:85] Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-10-29 15:51:17] [ INFO ] [main.Main:85] Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-10-29 15:51:17] [ INFO ] [main.Main:85] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-10-29 15:51:17] [ INFO ] [main.Main:85] Odontologo{apellido='Perez', nombre='Vivi', matricula=101}
-[2022-10-29 15:51:17] [ INFO ] [main.Main:85] Odontologo{apellido='Garcia', nombre='Dani', matricula=102}
-[2022-11-01 16:15:17] [ INFO ] [main.Main:86] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-11-01 16:15:17] [ INFO ] [main.Main:86] Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-11-01 16:15:17] [ INFO ] [main.Main:86] Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-11-01 16:15:17] [ INFO ] [main.Main:86] Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-11-01 16:15:17] [ INFO ] [main.Main:86] Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-11-01 16:15:17] [ INFO ] [main.Main:86] Odontologo{apellido='Perez', nombre='Vivi', matricula=101}
-[2022-11-01 16:15:17] [ INFO ] [main.Main:86] Odontologo{apellido='Garcia', nombre='Dani', matricula=102}
-[2022-11-01 16:27:45] [ INFO ] [Main:88] main.dao.model.Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-11-01 16:27:45] [ INFO ] [Main:88] main.dao.model.Odontologo{apellido='Tolo', nombre='Fer', matricula=101}
-[2022-11-01 16:27:45] [ INFO ] [Main:88] main.dao.model.Odontologo{apellido='Tolo', nombre='mar', matricula=102}
-[2022-11-01 16:27:45] [ INFO ] [Main:88] main.dao.model.Odontologo{apellido='Tolo', nombre='rick', matricula=103}
-[2022-11-01 16:27:45] [ INFO ] [Main:88] main.dao.model.Odontologo{apellido='Ruiz', nombre='Martha', matricula=100}
-[2022-11-01 16:27:45] [ INFO ] [Main:88] main.dao.model.Odontologo{apellido='Perez', nombre='Vivi', matricula=101}
-[2022-11-01 16:27:45] [ INFO ] [Main:88] main.dao.model.Odontologo{apellido='Garcia', nombre='Dani', matricula=102}
-[2022-11-02 11:01:03] [ ERROR] [Main:70] La base de datos puede que ya esté siendo utilizada: "C:/Users/Vivi/test.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
-Database may be already in use: "C:/Users/Vivi/test.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
-[2022-11-02 11:13:29] [ ERROR] [OdontologoDaoH2:66] Parametro "#1" no está fijado
-Parameter "#1" is not set; SQL statement:
-SELECT * FROM odontologos WHERE id = ? [90012-214]
-[2022-11-02 13:40:40] [ ERROR] [OdontologoDaoH2:66] Parametro "#1" no está fijado
-Parameter "#1" is not set; SQL statement:
-SELECT * FROM odontologos WHERE id = ? [90012-214]
-[2022-11-02 15:07:55] [ INFO ] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:09:39] [ ERROR] [OdontologoDaoH2:75] Parametro "#1" no está fijado
-Parameter "#1" is not set; SQL statement:
-SELECT * FROM odontologos WHERE id = ? [90012-214]
-[2022-11-02 15:13:26] [ ERROR] [OdontologoDaoH2:75] Parametro "#1" no está fijado
-Parameter "#1" is not set; SQL statement:
-SELECT * FROM odontologos WHERE id = ? [90012-214]
-[2022-11-02 15:14:29] [ INFO ] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:15:10] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:15:40] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:23:48] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:24:27] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:24:27] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:25:39] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:25:39] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:26:33] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:26:33] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:27:07] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:27:07] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:36:35] [ ERROR] [Main:74] La base de datos puede que ya esté siendo utilizada: "C:/Users/Vivi/test.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
-Database may be already in use: "C:/Users/Vivi/test.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
-[2022-11-02 15:36:56] [ ERROR] [Main:74] La base de datos puede que ya esté siendo utilizada: "C:/Users/Vivi/test.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
-Database may be already in use: "C:/Users/Vivi/test.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
-[2022-11-02 15:37:14] [ ERROR] [Main:74] La base de datos puede que ya esté siendo utilizada: "C:/Users/Vivi/test.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
-Database may be already in use: "C:/Users/Vivi/test.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
-[2022-11-02 15:50:59] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 15:50:59] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 16:02:49] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 16:02:49] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 16:03:35] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 16:03:35] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 16:04:16] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 16:04:36] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-02 19:39:31] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-02 19:57:02] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-02 19:57:55] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-02 19:57:55] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-03 13:43:32] [ ERROR] [OdontologoDaoH2:112] Metodo permitido unicamente en un query. Use execute ó executeUpdate en lugar de executeQuery
-Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
-UPDATE odontologos SET matricula= ? WHERE id =? [90002-214]
-[2022-11-03 13:59:10] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7895}
-[2022-11-03 13:59:10] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7895}
-[2022-11-03 14:02:40] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7895}
-[2022-11-03 14:02:40] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7895}
-[2022-11-03 14:04:46] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7899}
-[2022-11-03 14:04:46] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7899}
-[2022-11-03 14:28:56] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7899}
-[2022-11-03 14:28:56] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7891}
-[2022-11-03 14:30:17] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7891}
-[2022-11-03 14:30:17] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7891}
-[2022-11-03 14:37:04] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7891}
-[2022-11-03 14:37:04] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=789}
-[2022-11-03 14:38:23] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7890}
-[2022-11-03 14:38:24] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7890}
-[2022-11-03 14:40:18] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7890}
-[2022-11-03 14:40:18] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7893}
-[2022-11-03 14:41:09] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7893}
-[2022-11-03 14:41:09] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7893}
-[2022-11-03 14:51:50] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7893}
-[2022-11-03 14:51:50] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7893}
-[2022-11-03 14:52:30] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7893}
-[2022-11-03 14:52:30] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7893}
-[2022-11-03 14:53:15] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7893}
-[2022-11-03 14:53:16] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 15:04:18] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 15:04:18] [ ERROR] [OdontologoDaoH2:131] Metodo permitido unicamente en un query. Use execute ó executeUpdate en lugar de executeQuery
-Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
-DELETE FROM odontologos WHERE id = ? [90002-214]
-[2022-11-03 15:04:18] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 15:04:32] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 15:08:00] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 15:08:00] [ ERROR] [OdontologoDaoH2:131] Metodo permitido unicamente en un query. Use execute ó executeUpdate en lugar de executeQuery
-Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
-DELETE FROM odontologos WHERE id = ? [90002-214]
-[2022-11-03 15:08:00] [ DEBUG] [OdontologoDaoH2:72] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 15:15:18] [ DEBUG] [OdontologoDaoH2:71] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 15:30:34] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-03 15:30:34] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Guzman', nombre='Viviana', matricula=7898}
-[2022-11-03 15:37:03] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:10:58] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
+[2022-11-10 17:11:33] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-03 15:37:03] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:11:33] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-03 15:37:03] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:11:33] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 SELECT * FROM odontologos WHERE id = ? [42104-214]
-[2022-11-03 15:37:03] [ ERROR] [OdontologoDaoH2:125] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:11:33] [ ERROR] [OdontologoDaoH2:151] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 DELETE FROM odontologos WHERE id = ? [42104-214]
-[2022-11-03 15:37:03] [ ERROR] [OdontologoDaoH2:103] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-UPDATE odontologos SET matricula= ? WHERE id =? [42104-214]
-[2022-11-03 15:37:03] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-SELECT * FROM odontologos WHERE id = ? [42104-214]
-[2022-11-03 15:37:46] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-03 15:38:59] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-03 15:39:01] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 15:46:42] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-03 15:46:42] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 15:55:07] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-03 15:55:07] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 16:06:09] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-03 16:06:09] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 16:18:05] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-03 16:18:06] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-03 16:26:00] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:11:33] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-03 16:26:00] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:11:33] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-03 16:26:00] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-SELECT * FROM odontologos WHERE id = ? [42104-214]
-[2022-11-03 16:26:00] [ ERROR] [OdontologoDaoH2:125] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-DELETE FROM odontologos WHERE id = ? [42104-214]
-[2022-11-03 16:26:00] [ ERROR] [OdontologoDaoH2:103] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-UPDATE odontologos SET matricula= ? WHERE id =? [42104-214]
-[2022-11-03 16:26:00] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-SELECT * FROM odontologos WHERE id = ? [42104-214]
-[2022-11-03 16:27:34] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-03 16:27:34] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-04 14:45:10] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=1235}
-[2022-11-04 14:45:10] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-04 14:52:45] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:11:33] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 14:52:45] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 14:52:45] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 14:52:45] [ ERROR] [OdontologoDaoH2:107] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:11:34] [ ERROR] [OdontologoDaoH2:107] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 SELECT * FROM odontologos [42104-214]
-[2022-11-04 14:59:57] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 14:59:57] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 14:59:58] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-SELECT * FROM odontologos WHERE id = ? [42104-214]
-[2022-11-04 14:59:58] [ ERROR] [OdontologoDaoH2:150] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-DELETE FROM odontologos WHERE id = ? [42104-214]
-[2022-11-04 14:59:58] [ ERROR] [OdontologoDaoH2:107] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
-SELECT * FROM odontologos [42104-214]
-[2022-11-04 14:59:58] [ ERROR] [OdontologoDaoH2:128] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:11:34] [ ERROR] [OdontologoDaoH2:129] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 UPDATE odontologos SET matricula= ? WHERE id =? [42104-214]
-[2022-11-04 14:59:58] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:11:34] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 SELECT * FROM odontologos WHERE id = ? [42104-214]
-[2022-11-04 15:00:11] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-04 15:00:12] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-04 15:01:49] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
-[2022-11-04 15:03:09] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:12:08] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
+[2022-11-10 17:12:08] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
+[2022-11-10 17:23:55] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
+[2022-11-10 17:26:26] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
+[2022-11-10 17:26:42] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 15:03:09] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:26:42] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 15:03:10] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:26:42] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 SELECT * FROM odontologos WHERE id = ? [42104-214]
-[2022-11-04 15:03:10] [ ERROR] [OdontologoDaoH2:150] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:26:42] [ ERROR] [OdontologoDaoH2:151] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 DELETE FROM odontologos WHERE id = ? [42104-214]
-[2022-11-04 15:03:10] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:26:43] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 15:03:10] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:26:43] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 15:03:10] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:26:43] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
-[2022-11-04 15:03:10] [ ERROR] [OdontologoDaoH2:107] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:26:43] [ ERROR] [OdontologoDaoH2:107] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 SELECT * FROM odontologos [42104-214]
-[2022-11-04 15:03:10] [ ERROR] [OdontologoDaoH2:128] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:26:43] [ ERROR] [OdontologoDaoH2:129] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 UPDATE odontologos SET matricula= ? WHERE id =? [42104-214]
-[2022-11-04 15:03:10] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+[2022-11-10 17:26:43] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 SELECT * FROM odontologos WHERE id = ? [42104-214]
-[2022-11-04 15:03:33] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
-[2022-11-04 15:03:34] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
+[2022-11-10 17:27:07] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Guzman', nombre='Viviana', matricula=1234}
+[2022-11-10 17:27:07] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
+[2022-11-10 17:32:22] [ DEBUG] [OdontologoDaoH2:73] Odontologo{apellido='Buritica', nombre='Viviana', matricula=7898}
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+SELECT * FROM odontologos WHERE id = ? [42104-214]
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:151] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+DELETE FROM odontologos WHERE id = ? [42104-214]
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:42] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO odontologos(apellido, nombre, matricula) VALUES(?, ?, ?) [42104-214]
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:107] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+SELECT * FROM odontologos [42104-214]
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:129] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+UPDATE odontologos SET matricula= ? WHERE id =? [42104-214]
+[2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+SELECT * FROM odontologos WHERE id = ? [42104-214]
