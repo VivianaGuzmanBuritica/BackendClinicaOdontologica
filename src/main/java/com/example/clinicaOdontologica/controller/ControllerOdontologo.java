@@ -1,6 +1,6 @@
 package com.example.clinicaOdontologica.controller;
 
-import com.example.clinicaOdontologica.model.Odontologo;
+import com.example.clinicaOdontologica.model.OdontologoDTO;
 import com.example.clinicaOdontologica.service.OdontologoServiceLista;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
@@ -10,14 +10,14 @@ import java.util.List;
 @SpringBootApplication
 @RestController
 @RequestMapping("/odontologos")
-public class ControllerOdontologo implements Controllers<Odontologo> {
+public class ControllerOdontologo implements Controllers<OdontologoDTO> {
 
     OdontologoServiceLista serviceLista = new OdontologoServiceLista();
 
 
     @Override
     @PostMapping("/agregar")
-    public Boolean agregar(@RequestBody Odontologo o) {
+    public Boolean agregar(@RequestBody OdontologoDTO o) {
         boolean respuesta;
 
         respuesta = serviceLista.agregar(o);
@@ -28,7 +28,7 @@ public class ControllerOdontologo implements Controllers<Odontologo> {
 
     @Override
     @RequestMapping(method = RequestMethod.GET, path = "/buscarPorMatricula")
-    public Odontologo buscar(@RequestParam("matricula") int matricula) {
+    public OdontologoDTO buscar(@RequestParam("matricula") int matricula) {
         if (matricula != 0) {
             return serviceLista.buscarPorMatricula(matricula);
         }
@@ -37,7 +37,7 @@ public class ControllerOdontologo implements Controllers<Odontologo> {
 
     @Override
     @GetMapping("/todos")
-    public List<Odontologo> listar() {
+    public List<OdontologoDTO> listar() {
         return serviceLista.buscarTodos();
     }
 

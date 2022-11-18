@@ -1,8 +1,6 @@
 package com.example.clinicaOdontologica.controller;
 
-import com.example.clinicaOdontologica.model.Odontologo;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import com.example.clinicaOdontologica.model.OdontologoDTO;
 
 import java.util.List;
 
@@ -11,7 +9,7 @@ public interface Controllers <E>{
     Boolean agregar(E accion);
 
 
-    Boolean agregar(Odontologo o);
+    Boolean agregar(OdontologoDTO o);
 
     E buscar(int matricula);
 

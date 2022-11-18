@@ -1,5 +1,5 @@
 
-import com.example.clinicaOdontologica.model.Odontologo;
+import com.example.clinicaOdontologica.model.OdontologoDTO;
 import com.example.clinicaOdontologica.service.OdontologoServiceDaoH2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -12,8 +12,8 @@ class OdontologoServiceDaoH2Test {
     @Test
     void agregarOdontologo(){
         //DADOS
-        Odontologo odontologo = new Odontologo("Guzman", "Viviana", 1234);
-        Odontologo odontologo2 = new Odontologo("Buritica", "Viviana", 1235);
+        OdontologoDTO odontologo = new OdontologoDTO("Guzman", "Viviana", 1234);
+        OdontologoDTO odontologo2 = new OdontologoDTO("Buritica", "Viviana", 1235);
         //CUANDO
         odontologoService.agregar(odontologo);
         odontologoService.agregar(odontologo2);
@@ -23,7 +23,7 @@ class OdontologoServiceDaoH2Test {
 
      @Test
      void buscarPorId(){
-        Odontologo odontologo = odontologoService.buscar(2);
+        OdontologoDTO odontologo = odontologoService.buscar(2);
         Assertions.assertNotNull(odontologo);
      }
 
@@ -45,15 +45,15 @@ class OdontologoServiceDaoH2Test {
     @Test
     void listar(){
         //DADOS
-        Odontologo odontologo1 = new Odontologo("Guzman", "Paca", 1234);
-        Odontologo odontologo2 = new Odontologo("Buritica", "Leon", 1235);
-        Odontologo odontologo3 = new Odontologo("Buritica", "Dani", 1236);
+        OdontologoDTO odontologo1 = new OdontologoDTO("Guzman", "Paca", 1234);
+        OdontologoDTO odontologo2 = new OdontologoDTO("Buritica", "Leon", 1235);
+        OdontologoDTO odontologo3 = new OdontologoDTO("Buritica", "Dani", 1236);
         //CUANDO
         odontologoService.agregar(odontologo1);
         odontologoService.agregar(odontologo2);
         odontologoService.agregar(odontologo3);
 
-        List<Odontologo> odontologos= odontologoService.listar();
+        List<OdontologoDTO> odontologos= odontologoService.listar();
         //ENTONCES
         Assertions.assertTrue(odontologos.size() >0);
 

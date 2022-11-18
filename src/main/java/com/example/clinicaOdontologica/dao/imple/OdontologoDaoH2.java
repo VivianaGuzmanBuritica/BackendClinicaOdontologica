@@ -2,7 +2,7 @@ package com.example.clinicaOdontologica.dao.imple;
 
 import com.example.clinicaOdontologica.dao.iDao;
 import com.example.clinicaOdontologica.dao.util.ConfiguracionJDBC;
-import com.example.clinicaOdontologica.model.Odontologo;
+import com.example.clinicaOdontologica.model.OdontologoDTO;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OdontologoDaoH2 implements iDao<Odontologo> {
+public class OdontologoDaoH2 implements iDao<OdontologoDTO> {
 
     private final static Logger logger = Logger.getLogger(OdontologoDaoH2.class);
 
@@ -22,7 +22,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
 
 
     @Override
-    public Boolean agregar(Odontologo odontologo) {
+    public Boolean agregar(OdontologoDTO odontologo) {
         jdbc.cargarElControlador();
 
 
@@ -47,11 +47,11 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
     }
 
     @Override
-    public Odontologo buscar(int id) {
+    public OdontologoDTO buscar(int id) {
 
         jdbc.cargarElControlador();
-        Odontologo respuesta = null;
-        List<Odontologo> odontologos = new ArrayList<>();
+        OdontologoDTO respuesta = null;
+        List<OdontologoDTO> odontologos = new ArrayList<>();
 
         try (Connection conexion = jdbc.conectarConBaseDeDatos();
              PreparedStatement stmt = conexion.prepareStatement("SELECT * FROM odontologos WHERE id = ?")){
@@ -61,7 +61,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
             ResultSet rs = stmt.executeQuery();
 
             if(rs.next()){
-                respuesta = new Odontologo(
+                respuesta = new OdontologoDTO(
 
                         rs.getString("apellido"),
                         rs.getString("nombre"),
@@ -79,11 +79,11 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
     }
 
     @Override
-    public  List<Odontologo> listar() {
+    public  List<OdontologoDTO> listar() {
 
         jdbc.cargarElControlador();
 
-        List<Odontologo> odontologos = new ArrayList<>();
+        List<OdontologoDTO> odontologos = new ArrayList<>();
 
         try (Connection conexion = jdbc.conectarConBaseDeDatos();
              PreparedStatement stmt = conexion.prepareStatement("SELECT * FROM odontologos")){
@@ -91,7 +91,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
             ResultSet rs = stmt.executeQuery();
 
             while(rs.next()){
-              Odontologo odontologo = new Odontologo(
+              OdontologoDTO odontologo = new OdontologoDTO(
                         rs.getString("apellido"),
                         rs.getString("nombre"),
                         rs.getInt("matricula"));
