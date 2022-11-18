@@ -2,13 +2,13 @@ package com.example.clinicaOdontologica.dao;
 
 import java.util.List;
 
-public interface iDao <accion>{
+public interface iDao<T>{
 
-    Boolean agregar(accion accion);
+    Boolean agregar(T tipo);
 
-    accion buscar(int id);
+    T buscar(int id);
 
-    List<accion> listar();
+    List<T> listar();
     int modificar(int matricula, int id);
 
     int eliminar(int id);

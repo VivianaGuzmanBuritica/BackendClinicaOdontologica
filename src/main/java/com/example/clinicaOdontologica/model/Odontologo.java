@@ -1,6 +1,8 @@
 package com.example.clinicaOdontologica.model;
 
-public class Odontologo {
+import java.io.Serializable;
+
+public class Odontologo implements Serializable {
 
     private int id;
     private String apellido;

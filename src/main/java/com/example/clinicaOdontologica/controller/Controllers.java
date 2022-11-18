@@ -13,13 +13,13 @@ public interface Controllers <E>{
 
     Boolean agregar(Odontologo o);
 
-    E buscar(int id);
+    E buscar(int matricula);
 
     List<E> listar();
 
-    int modificar(int matricula, int id);
+    int modificar(int matricula, int matriculaNueva );
 
-    int eliminar(int id);
+    boolean eliminar(int matricula);
 }
 
 

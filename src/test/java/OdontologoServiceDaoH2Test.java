@@ -1,5 +1,4 @@
 
-import com.example.clinicaOdontologica.dao.imple.OdontologoDaoH2;
 import com.example.clinicaOdontologica.model.Odontologo;
 import com.example.clinicaOdontologica.service.OdontologoServiceDaoH2;
 import org.junit.jupiter.api.Assertions;
@@ -8,7 +7,7 @@ import java.util.List;
 
 class OdontologoServiceDaoH2Test {
 
-    private OdontologoServiceDaoH2 odontologoService = new OdontologoServiceDaoH2(new OdontologoDaoH2());
+    private OdontologoServiceDaoH2 odontologoService = new OdontologoServiceDaoH2();
 
     @Test
     void agregarOdontologo(){

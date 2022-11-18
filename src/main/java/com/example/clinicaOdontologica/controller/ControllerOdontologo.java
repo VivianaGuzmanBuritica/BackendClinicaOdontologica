@@ -1,20 +1,15 @@
 package com.example.clinicaOdontologica.controller;
 
 import com.example.clinicaOdontologica.model.Odontologo;
-import com.example.clinicaOdontologica.persistance.OdontologoDaoLista;
-import com.example.clinicaOdontologica.service.OdontologoServiceDaoH2;
 import com.example.clinicaOdontologica.service.OdontologoServiceLista;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @SpringBootApplication
 @RestController
-
+@RequestMapping("/odontologos")
 public class ControllerOdontologo implements Controllers<Odontologo> {
 
     OdontologoServiceLista serviceLista = new OdontologoServiceLista();
@@ -22,7 +17,7 @@ public class ControllerOdontologo implements Controllers<Odontologo> {
 
     @Override
     @PostMapping("/agregar")
-    public Boolean agregar(@RequestBody Odontologo o){
+    public Boolean agregar(@RequestBody Odontologo o) {
         boolean respuesta;
 
         respuesta = serviceLista.agregar(o);
@@ -32,7 +27,11 @@ public class ControllerOdontologo implements Controllers<Odontologo> {
     }
 
     @Override
-    public Odontologo buscar(int id) {
+    @RequestMapping(method = RequestMethod.GET, path = "/buscarPorMatricula")
+    public Odontologo buscar(@RequestParam("matricula") int matricula) {
+        if (matricula != 0) {
+            return serviceLista.buscarPorMatricula(matricula);
+        }
         return null;
     }
 
@@ -43,14 +42,19 @@ public class ControllerOdontologo implements Controllers<Odontologo> {
     }
 
 
-
     @Override
-    public int modificar(int matricula, int id) {
+    public int modificar(int matricula, int matriculaNueva) {
         return 0;
     }
 
     @Override
-    public int eliminar(int id) {
-        return 0;
+    @RequestMapping(method = RequestMethod.DELETE, path = "/eliminarPorMatricula")
+    public boolean eliminar(@RequestParam("matricula") int matricula) {
+        if (matricula != 0) {
+            serviceLista.eliminar(matricula);
+        } else {
+            return false;
+        }
+        return true;
     }
 }
