@@ -1,21 +1,21 @@
 package com.example.clinicaOdontologica.persistance;
 
-import com.example.clinicaOdontologica.model.OdontologoDTO;
+import com.example.clinicaOdontologica.model.OdontologoDto;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OdontologoDaoLista implements IDaoLista<OdontologoDTO> {
+public class OdontologoDaoLista implements IDaoLista<OdontologoDto> {
 
-    private List<OdontologoDTO> datos;
+    private List<OdontologoDto> datos;
 
     public OdontologoDaoLista() {
         this.datos = new ArrayList<>();
-        datos.add(new OdontologoDTO("Gonzalez", "Pepe", 12345));
-        datos.add(new OdontologoDTO("Lopera", "Maria", 4321));
+        datos.add(new OdontologoDto("Gonzalez", "Pepe", 12345));
+        datos.add(new OdontologoDto("Lopera", "Maria", 4321));
     }
 
     @Override
-    public List<OdontologoDTO> getDatos() {return datos; }
+    public List<OdontologoDto> getDatos() {return datos; }
 
 }

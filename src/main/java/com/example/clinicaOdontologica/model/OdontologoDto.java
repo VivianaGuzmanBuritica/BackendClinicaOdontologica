@@ -2,17 +2,17 @@ package com.example.clinicaOdontologica.model;
 
 import java.io.Serializable;
 
-public class OdontologoDTO implements Serializable {
+public class OdontologoDto implements Serializable {
 
     private int id;
     private String apellido;
     private String nombre;
     private int matricula;
 
-    public OdontologoDTO() {
+    public OdontologoDto() {
     }
 
-    public OdontologoDTO(String apellido, String nombre, int matricula) {
+    public OdontologoDto(String apellido, String nombre, int matricula) {
 
         this.apellido = apellido;
         this.nombre = nombre;

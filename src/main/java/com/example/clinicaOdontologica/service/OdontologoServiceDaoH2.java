@@ -1,15 +1,15 @@
 package com.example.clinicaOdontologica.service;
 
 import com.example.clinicaOdontologica.dao.iDao;
-import com.example.clinicaOdontologica.model.OdontologoDTO;
+import com.example.clinicaOdontologica.model.OdontologoDto;
 
 import java.util.List;
 
 public class OdontologoServiceDaoH2 {
 
-    private iDao<OdontologoDTO> odontologoiDao;
+    private iDao<OdontologoDto> odontologoiDao;
 
-    public OdontologoServiceDaoH2(iDao<OdontologoDTO> odontologoiDao) {
+    public OdontologoServiceDaoH2(iDao<OdontologoDto> odontologoiDao) {
 
         this.odontologoiDao = odontologoiDao;
     }
@@ -19,14 +19,14 @@ public class OdontologoServiceDaoH2 {
         this.odontologoiDao = odontologoiDao;
     }
 
-    public Boolean agregar(OdontologoDTO odontologo){
+    public Boolean agregar(OdontologoDto odontologo){
 
         return odontologoiDao.agregar(odontologo);
     }
 
 
 
-    public OdontologoDTO buscar(int id){
+    public OdontologoDto buscar(int id){
 
         return odontologoiDao.buscar(id);
     }
@@ -43,7 +43,7 @@ public class OdontologoServiceDaoH2 {
 
     }
 
-    public List<OdontologoDTO> listar(){
+    public List<OdontologoDto> listar(){
 
         return odontologoiDao.listar();
     }
