@@ -1,48 +1,44 @@
 package com.example.clinicaOdontologica.controller;
 
-import com.example.clinicaOdontologica.model.OdontologoDto;
 import com.example.clinicaOdontologica.model.PacienteDto;
-import com.example.clinicaOdontologica.service.OdontologoServiceLista;
-import com.example.clinicaOdontologica.service.PacienteServiceLista;
+import com.example.clinicaOdontologica.persistance.entity.Paciente;
+import com.example.clinicaOdontologica.service.orm.PacienteServiceOrm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @SpringBootApplication
 @RestController
 @RequestMapping("/pacientes")
-public class ControllerPaciente implements Controllers<PacienteDto>{
+public class ControllerPaciente implements Controllers<Paciente>{
 
     @Autowired
-    PacienteServiceLista serviceLista;
-
+    PacienteServiceOrm service;
 
     @Override
     @PostMapping("/agregar")
-    public Boolean agregar(@RequestBody PacienteDto p) {
-        boolean respuesta;
+   public Paciente agregar(@RequestBody Paciente p) {
 
-        respuesta = serviceLista.agregar(p);
-
-        return respuesta;
-
-    }
+     return service.agregar(p);
+//
+  }
 
     @Override
-    @RequestMapping(method = RequestMethod.GET, path = "/buscarPorDni")
-    public PacienteDto buscar(@RequestParam("dni") int dni) {
-        if (dni != 0) {
-            return serviceLista.buscarPorDni(dni);
+    @RequestMapping(method = RequestMethod.GET, path = "/buscarPorId")
+    public Optional<Paciente> buscar(@RequestParam("id") Long id) {
+        if (id != 0) {
+           return service.buscarPorId(id);
         }
-        return null;
-    }
+      return null;
+   }
 
     @Override
     @GetMapping("/todos")
-    public List<PacienteDto> listar() {
-        return serviceLista.buscarTodos();
+    public List<Paciente> listar() {
+        return service.listar();
     }
 
 
@@ -52,12 +48,12 @@ public class ControllerPaciente implements Controllers<PacienteDto>{
     }
 
     @Override
-    @RequestMapping(method = RequestMethod.DELETE, path = "/eliminarPorDni")
-    public boolean eliminar(@RequestParam("dni") int dni) {
-        if (dni != 0) {
-            serviceLista.eliminar(dni);
+    @RequestMapping(method = RequestMethod.DELETE, path = "/eliminarPorId")
+    public boolean eliminar(@RequestParam("id") Long id) {
+        if (id != 0) {
+            service.eliminar(id);
         } else {
-            return false;
+           return false;
         }
         return true;
     }

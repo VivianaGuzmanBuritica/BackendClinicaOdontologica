@@ -1,4 +1,4 @@
-package com.example.clinicaOdontologica.persistance;
+package com.example.clinicaOdontologica.persistance.listas;
 
 import java.util.List;
 

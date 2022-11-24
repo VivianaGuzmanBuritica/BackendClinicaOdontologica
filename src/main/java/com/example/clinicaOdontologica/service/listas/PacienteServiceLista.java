@@ -1,10 +1,8 @@
-package com.example.clinicaOdontologica.service;
+package com.example.clinicaOdontologica.service.listas;
 
-import com.example.clinicaOdontologica.model.OdontologoDto;
 import com.example.clinicaOdontologica.model.PacienteDto;
-import com.example.clinicaOdontologica.persistance.IDaoLista;
-import com.example.clinicaOdontologica.persistance.OdontologoDaoLista;
-import com.example.clinicaOdontologica.persistance.PacienteDaoLista;
+import com.example.clinicaOdontologica.persistance.listas.IDaoLista;
+import com.example.clinicaOdontologica.persistance.listas.PacienteDaoLista;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

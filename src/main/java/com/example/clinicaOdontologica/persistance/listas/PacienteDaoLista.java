@@ -1,10 +1,8 @@
-package com.example.clinicaOdontologica.persistance;
+package com.example.clinicaOdontologica.persistance.listas;
 
 import com.example.clinicaOdontologica.model.Domicilio;
-import com.example.clinicaOdontologica.model.OdontologoDto;
 import com.example.clinicaOdontologica.model.PacienteDto;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;

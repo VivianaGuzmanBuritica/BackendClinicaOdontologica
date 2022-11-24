@@ -1,4 +1,4 @@
-package com.example.clinicaOdontologica.service;
+package com.example.clinicaOdontologica.service.dao;
 
 import com.example.clinicaOdontologica.dao.iDao;
 import com.example.clinicaOdontologica.model.OdontologoDto;
