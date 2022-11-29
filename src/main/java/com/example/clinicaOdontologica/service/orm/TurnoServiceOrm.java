@@ -18,17 +18,13 @@ import java.util.Set;
 
 @Service
 public class TurnoServiceOrm {
-
     private final ITurnoRepository turnoRepository;
-
-
 
     @Autowired
     ObjectMapper mapper;
 
     public TurnoServiceOrm(ITurnoRepository turnoRepository, IOdontologoRepository odontologoRepository, IPacienteRepository pacienteRepository) {
         this.turnoRepository = turnoRepository;
-
     }
 
     public TurnoDto agregar(TurnoDto turnoNuevo) {

@@ -26,7 +26,6 @@ public class OdontologoServiceOrm {
     }
     public Odontologo  agregar(Odontologo odontologoNuevo){
         if(odontologoNuevo != null){
-            /*odontologoNuevo.asignacionTurnosOdontologo(turno);*/
             return odontologoRepository.save(odontologoNuevo);
         }
         return new Odontologo();
