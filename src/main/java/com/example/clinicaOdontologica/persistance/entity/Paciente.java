@@ -35,7 +35,7 @@ public class Paciente {
     @JoinColumn(name ="id_domicilio", referencedColumnName = "id")
     private Domicilio domicilio;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idPaciente",
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "paciente",
             cascade = CascadeType.ALL)
     private Set<Turno> idTurnos;
 

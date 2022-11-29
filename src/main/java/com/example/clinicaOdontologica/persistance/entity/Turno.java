@@ -1,5 +1,6 @@
 package com.example.clinicaOdontologica.persistance.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,11 +22,11 @@ public class Turno {
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_odontologo")
-    private Odontologo idOdontologo;
+    private Odontologo odontologo;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_paciente")
-    private Paciente idPaciente;
+    private Paciente paciente;
 
     public Turno() {}
 }

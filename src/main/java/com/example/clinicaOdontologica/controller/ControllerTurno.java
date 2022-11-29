@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @SpringBootApplication
@@ -37,6 +38,11 @@ public class ControllerTurno {
     public Set<TurnoDto> listar(){
         return serviceTurno.listar();
     }
+/*
+    @GetMapping(value = "/todos", produces = "application/json")
+    public List<TurnoDto> listar(){
+        return serviceTurno.listar();
+    }*/
 
 
 

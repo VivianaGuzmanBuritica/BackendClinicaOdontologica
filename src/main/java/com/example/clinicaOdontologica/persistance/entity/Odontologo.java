@@ -25,7 +25,7 @@ public class Odontologo {
     @Column(name = "matricula")
     private int matricula;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idOdontologo",
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "odontologo",
             cascade = CascadeType.ALL)
     private Set<Turno> idTurnos;
 
