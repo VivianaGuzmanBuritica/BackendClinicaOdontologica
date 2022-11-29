@@ -4,6 +4,7 @@ import com.example.clinicaOdontologica.model.OdontologoDto;
 import com.example.clinicaOdontologica.persistance.entity.Odontologo;
 import com.example.clinicaOdontologica.service.listas.OdontologoServiceLista;
 import com.example.clinicaOdontologica.service.orm.OdontologoServiceOrm;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +18,6 @@ import java.util.Optional;
 public class ControllerOdontologo implements Controllers<Odontologo> {
 
     @Autowired
-    //OdontologoServiceLista service;
-
     OdontologoServiceOrm service;
 
    @Override

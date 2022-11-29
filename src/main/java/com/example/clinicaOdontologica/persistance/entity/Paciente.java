@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Setter
 @Getter
@@ -29,8 +30,14 @@ public class Paciente {
     @Column(name = "fechaDeAlta")
     private Date fechaDeAlta;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER,
+    cascade = CascadeType.ALL)
     @JoinColumn(name ="id_domicilio", referencedColumnName = "id")
     private Domicilio domicilio;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idPaciente", cascade = CascadeType.ALL)
+    private Set<Turno> idTurnos;
+
+    public Paciente() {}
 }
 

@@ -29,5 +29,4 @@ public class Domicilio {
     @Column(name="apartamento")
     private int apartamento;
 
-
 }

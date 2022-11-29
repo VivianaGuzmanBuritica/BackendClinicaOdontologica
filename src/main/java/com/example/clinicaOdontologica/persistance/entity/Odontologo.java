@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Setter
 @Getter
@@ -23,6 +24,9 @@ public class Odontologo {
     @Column(name = "matricula")
     private int matricula;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idOdontologo", cascade = CascadeType.ALL)
+    private Set<Turno> idTurnos;
 
-
+    public Odontologo() {
+    }
 }
