@@ -1,8 +1,10 @@
 package com.example.clinicaOdontologica.service.orm;
 
 import com.example.clinicaOdontologica.model.OdontologoDto;
+import com.example.clinicaOdontologica.model.TurnoDto;
 import com.example.clinicaOdontologica.persistance.entity.Odontologo;
 import com.example.clinicaOdontologica.persistance.entity.Paciente;
+import com.example.clinicaOdontologica.persistance.entity.Turno;
 import com.example.clinicaOdontologica.persistance.repository.IOdontologoRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +18,6 @@ import java.util.stream.Collectors;
 public class OdontologoServiceOrm {
     private  final IOdontologoRepository odontologoRepository;
 
-
     public OdontologoServiceOrm(IOdontologoRepository odontologoRepository) {
         this.odontologoRepository = odontologoRepository;
     }
@@ -25,6 +26,7 @@ public class OdontologoServiceOrm {
     }
     public Odontologo  agregar(Odontologo odontologoNuevo){
         if(odontologoNuevo != null){
+            /*odontologoNuevo.asignacionTurnosOdontologo(turno);*/
             return odontologoRepository.save(odontologoNuevo);
         }
         return new Odontologo();

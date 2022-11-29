@@ -21,26 +21,20 @@ public class TurnoServiceOrm {
 
     private final ITurnoRepository turnoRepository;
 
-   /* private final IOdontologoRepository odontologoRepository;
 
-    private final IPacienteRepository pacienteRepository;*/
 
     @Autowired
     ObjectMapper mapper;
 
     public TurnoServiceOrm(ITurnoRepository turnoRepository, IOdontologoRepository odontologoRepository, IPacienteRepository pacienteRepository) {
         this.turnoRepository = turnoRepository;
-        /*this.odontologoRepository = odontologoRepository;
-        this.pacienteRepository = pacienteRepository;*/
+
     }
 
     public TurnoDto agregar(TurnoDto turnoNuevo) {
         Turno t = mapper.convertValue(turnoNuevo, Turno.class);
 
-        if (t != null
-        /*&& odontologoRepository.findById(t.getOdontologo().getId()).isPresent()
-        && pacienteRepository.findById(t.getOdontologo().getId()).isPresent()*/
-        ) {
+        if (t != null) {
 
             turnoRepository.save(t);
         }

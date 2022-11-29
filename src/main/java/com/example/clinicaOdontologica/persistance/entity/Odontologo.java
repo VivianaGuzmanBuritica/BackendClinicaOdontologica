@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Setter
@@ -26,6 +27,19 @@ public class Odontologo {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idOdontologo", cascade = CascadeType.ALL)
     private Set<Turno> idTurnos;
+
+ /*   public void asignacionTurnosOdontologo(Turno t){
+     if (null == idTurnos) {
+            idTurnos= new HashSet<>();
+        }
+        idTurnos.add(t);
+        t.setIdOdontologo(this);
+    }
+
+    public void eliminarTurnosOdontologo(Turno t){
+        idTurnos.remove(t);
+        t.setIdOdontologo(null);
+    }*/
 
     public Odontologo() {
     }
