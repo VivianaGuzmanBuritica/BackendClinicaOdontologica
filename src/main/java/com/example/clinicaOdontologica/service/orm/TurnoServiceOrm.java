@@ -9,6 +9,7 @@ import com.example.clinicaOdontologica.persistance.repository.IOdontologoReposit
 import com.example.clinicaOdontologica.persistance.repository.IPacienteRepository;
 import com.example.clinicaOdontologica.persistance.repository.ITurnoRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,12 +45,14 @@ public class TurnoServiceOrm {
         System.out.println(turnos);
         Set<TurnoDto> turnosDto = new HashSet<>();
         System.out.println(turnosDto);
+        mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 
         for (Turno t : turnos) {
             turnosDto.add(mapper.convertValue(t, TurnoDto.class));
             System.out.println(turnosDto);
         }
-        return turnosDto;}
+        return turnosDto;
+    }
 
        /* public List<TurnoDto> listar() {
 

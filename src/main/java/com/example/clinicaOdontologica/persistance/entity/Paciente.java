@@ -35,9 +35,10 @@ public class Paciente {
     @JoinColumn(name ="id_domicilio", referencedColumnName = "id")
     private Domicilio domicilio;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "paciente",
+   /* @OneToMany(fetch = FetchType.LAZY, mappedBy = "paciente",
             cascade = CascadeType.ALL)
-    private Set<Turno> idTurnos;
+            @JsonIgnoreProperties(value = {"referenceList", "handler","hibernateLazyInitializer"}, allowSetters = true)
+    private Set<Turno> idTurnos;*/
 
     public Paciente() {}
 }

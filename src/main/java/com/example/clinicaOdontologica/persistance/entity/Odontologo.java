@@ -25,10 +25,11 @@ public class Odontologo {
     @Column(name = "matricula")
     private int matricula;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "odontologo",
+  /*  @OneToMany(fetch = FetchType.LAZY, mappedBy = "odontologo",
             cascade = CascadeType.ALL)
+            @JsonIgnoreProperties(value = {"referenceList", "handler","hibernateLazyInitializer"}, allowSetters = true)
     private Set<Turno> idTurnos;
-
+*/
  /*   public void asignacionTurnosOdontologo(Turno t){
      if (null == idTurnos) {
             idTurnos= new HashSet<>();
