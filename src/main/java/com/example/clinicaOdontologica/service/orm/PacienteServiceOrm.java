@@ -1,6 +1,7 @@
 package com.example.clinicaOdontologica.service.orm;
 
 
+import com.example.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.example.clinicaOdontologica.persistance.entity.Paciente;
 import com.example.clinicaOdontologica.persistance.repository.IPacienteRepository;
 import org.springframework.stereotype.Service;
@@ -34,11 +35,11 @@ public class PacienteServiceOrm {
         return pacienteRepository.findById(id);
     }
 
-    public boolean eliminar(Long id){
-        if (!pacienteRepository.findById(id).isPresent()) {
+    public boolean eliminar(Long id) throws ResourceNotFoundException {
+        if (pacienteRepository.findById(id).isPresent()) {
             pacienteRepository.deleteById(id);
         } else {
-            return false;
+            throw new ResourceNotFoundException("No se puede eliminar, no existe un Paciente con el id: "+id);
         }
         return true;
 
