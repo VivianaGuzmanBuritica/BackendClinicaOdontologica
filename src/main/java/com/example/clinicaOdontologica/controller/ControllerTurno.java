@@ -1,12 +1,17 @@
 package com.example.clinicaOdontologica.controller;
 
+import com.example.clinicaOdontologica.exceptions.BadRequest;
+import com.example.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.example.clinicaOdontologica.model.TurnoDto;
 import com.example.clinicaOdontologica.service.orm.OdontologoServiceOrm;
 import com.example.clinicaOdontologica.service.orm.TurnoServiceOrm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.management.BadAttributeValueExpException;
 import java.util.List;
 import java.util.Set;
 
@@ -20,14 +25,13 @@ public class ControllerTurno {
     OdontologoServiceOrm serviceOdntologo;*/
 
     @PostMapping("/agregar")
-    public TurnoDto agregar(@RequestBody TurnoDto t){
-
+    public TurnoDto agregar(@RequestBody TurnoDto t) throws BadRequest{
         return serviceTurno.agregar(t);
     }
 
 
     @GetMapping("/buscarPorId")
-    private TurnoDto buscar(@RequestParam("id") Long id){
+    private TurnoDto buscar(@RequestParam("id") Long id) throws ResourceNotFoundException{
         if (id != 0) {
             return serviceTurno.buscarPorId(id);
         }
@@ -35,24 +39,20 @@ public class ControllerTurno {
     }
 
     @GetMapping(value = "/todos", produces = "application/json")
-    public Set<TurnoDto> listar(){
+    public Set<TurnoDto> listar() throws ResourceNotFoundException {
         return serviceTurno.listar();
     }
-/*
-    @GetMapping(value = "/todos", produces = "application/json")
-    public List<TurnoDto> listar(){
-        return serviceTurno.listar();
-    }*/
-
 
 
     @RequestMapping(method = RequestMethod.DELETE, path = "/eliminarPorId")
-    public boolean eliminar(@RequestParam("id") Long id) {
-        if (id != 0) {
+    public boolean eliminar(@RequestParam("id") Long id) throws ResourceNotFoundException {
+        if (id != null) {
             serviceTurno.eliminar(id);
-        } else {
-            return false;
         }
         return true;
     }
+
+
+
 }
+

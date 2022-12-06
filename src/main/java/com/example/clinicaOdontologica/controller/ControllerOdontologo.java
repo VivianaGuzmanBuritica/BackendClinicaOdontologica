@@ -1,5 +1,6 @@
 package com.example.clinicaOdontologica.controller;
 
+import com.example.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.example.clinicaOdontologica.model.OdontologoDto;
 import com.example.clinicaOdontologica.persistance.entity.Odontologo;
 import com.example.clinicaOdontologica.service.listas.OdontologoServiceLista;
@@ -29,7 +30,7 @@ public class ControllerOdontologo implements Controllers<Odontologo> {
 
     @Override
     @RequestMapping(method = RequestMethod.GET, path = "/buscarPorId")
-    public Optional<Odontologo> buscar(@RequestParam("id") Long id) {
+    public Optional<Odontologo> buscar(@RequestParam("id") Long id) throws ResourceNotFoundException {
         if (id != 0) {
             return service.buscarPorId(id);
         }
@@ -49,12 +50,10 @@ public class ControllerOdontologo implements Controllers<Odontologo> {
     }
   @Override
     @RequestMapping(method = RequestMethod.DELETE, path = "/eliminarPorId")
-   public boolean eliminar(@RequestParam("id") Long id) {
-       if (id != 0) {
+   public boolean eliminar(@RequestParam("id") Long id) throws ResourceNotFoundException {
+       if (id != null) {
             service.eliminar(id);
-     } else {
-            return false;
-        }
+     }
       return true;
   }
 }
