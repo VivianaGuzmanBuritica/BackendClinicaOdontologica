@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class GlobalException{
+public class GlobalExceptionHandler {
 
-    @ExceptionHandler(BadRequest.class)
-    public ResponseEntity<?> doWhenException(BadRequest badRequest){
+    @ExceptionHandler(BadDateRequestException.class)
+    public ResponseEntity<?> doWhenException(BadDateRequestException badRequest){
         return new ResponseEntity<>(badRequest.getMessage(), HttpStatus.BAD_REQUEST);
 
     }
+
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<?> doWhenException(ResourceNotFoundException ex){
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);

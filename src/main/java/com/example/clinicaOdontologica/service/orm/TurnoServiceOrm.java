@@ -1,8 +1,7 @@
 package com.example.clinicaOdontologica.service.orm;
 
 
-import com.example.clinicaOdontologica.config.MapperConfig;
-import com.example.clinicaOdontologica.exceptions.BadRequest;
+import com.example.clinicaOdontologica.exceptions.BadDateRequestException;
 import com.example.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.example.clinicaOdontologica.model.TurnoDto;
 
@@ -14,7 +13,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.*;
 
@@ -33,14 +31,16 @@ public class TurnoServiceOrm {
         this.turnoRepository = turnoRepository;
     }
 
-    public TurnoDto agregar(TurnoDto turnoNuevo) throws BadRequest{
+    public TurnoDto agregar(TurnoDto turnoNuevo) throws BadDateRequestException {
+        List<Turno> turnos = turnoRepository.findAll();
         Turno t = mapper.convertValue(turnoNuevo, Turno.class);
 
-        if (t != null) {
-
-            turnoRepository.save(t);
-        }else{
-            throw new BadRequest("No se pudo crear su turno, revise que se hayan diligenciado bien los datos de su peticion");
+        for(Turno turno: turnos){
+            if (t.getFechaTurno() != turno.getFechaTurno()) {
+                turnoRepository.save(t);
+            }else{
+                throw new BadDateRequestException("No se pueden agendar dos turnos con la misma fecha");
+            }
         }
         return turnoNuevo;
     }
@@ -55,7 +55,7 @@ public class TurnoServiceOrm {
             turnosDto.add(mapper.convertValue(t, TurnoDto.class));
 
         }} else{
-            throw new ResourceNotFoundException("Error del del cliente, no encontrado");
+            throw new ResourceNotFoundException("Error del cliente, no encontrado");
         }
 
         return turnosDto;
