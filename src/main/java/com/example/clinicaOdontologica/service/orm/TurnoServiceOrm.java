@@ -36,12 +36,11 @@ public class TurnoServiceOrm {
         Turno t = mapper.convertValue(turnoNuevo, Turno.class);
 
         for(Turno turno: turnos){
-            if (t.getFechaTurno() != turno.getFechaTurno()) {
-                turnoRepository.save(t);
-            }else{
+            if (t.getFechaTurno().equals(turno.getFechaTurno())) {
                 throw new BadDateRequestException("No se pueden agendar dos turnos con la misma fecha");
             }
         }
+        turnoRepository.save(t);
         return turnoNuevo;
     }
 
@@ -55,7 +54,7 @@ public class TurnoServiceOrm {
             turnosDto.add(mapper.convertValue(t, TurnoDto.class));
 
         }} else{
-            throw new ResourceNotFoundException("Error del cliente, no encontrado");
+            throw new ResourceNotFoundException("No se encuentran turnos");
         }
 
         return turnosDto;
