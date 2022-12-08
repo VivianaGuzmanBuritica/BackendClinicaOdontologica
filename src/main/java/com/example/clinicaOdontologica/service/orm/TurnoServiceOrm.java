@@ -60,19 +60,7 @@ public class TurnoServiceOrm {
         return turnosDto;
     }
 
-       /* public List<TurnoDto> listar() {
-
-        List<TurnoDto> resultado = new ArrayList<>();
-
-       List<Turno> entidades = turnoRepository.findAll();
-
-        entidades.forEach(e -> resultado.add(mMapper.getModelMapper().map(e, TurnoDto.class)));
-
-        return resultado;
-
-    }*/
-
-    public TurnoDto buscarPorId(Long id) throws ResourceNotFoundException {
+     public TurnoDto buscarPorId(Long id) throws ResourceNotFoundException {
         Optional<Turno> t = turnoRepository.findById(id);
         TurnoDto turnoDtoId = null;
         if (t.isPresent()) {

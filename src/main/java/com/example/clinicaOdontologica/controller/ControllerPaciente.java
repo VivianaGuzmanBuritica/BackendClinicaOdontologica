@@ -36,6 +36,13 @@ public class ControllerPaciente implements Controllers<Paciente>{
       return null;
    }
 
+   @GetMapping("/buscarPorNombre")
+   public Optional<Paciente> buscarPorMatricula(@RequestParam("nombre") String nombre){
+        if(!nombre.equals(null)){
+            return  service.buscarPorNombre(nombre);
+        }
+        return null;
+   }
     @Override
     @GetMapping("/todos")
     public List<Paciente> listar() {

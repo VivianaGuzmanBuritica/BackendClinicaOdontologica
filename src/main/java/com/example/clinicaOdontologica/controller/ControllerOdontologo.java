@@ -37,6 +37,14 @@ public class ControllerOdontologo implements Controllers<Odontologo> {
         return null;
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/buscarPorMatricula")
+    public Optional<Odontologo> buscarPorMatricula(@RequestParam("matricula") String matricula) throws ResourceNotFoundException{
+       if(!matricula.equals(null)){
+           return service.buscarPorMatricula(matricula);
+       }
+       return null;
+    }
+
     @Override
     @GetMapping(value = "/todos", produces = "application/json")
     public List<Odontologo> listar() {

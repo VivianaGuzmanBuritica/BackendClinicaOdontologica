@@ -23,7 +23,7 @@ public class Odontologo {
     private String nombre;
 
     @Column(name = "matricula")
-    private int matricula;
+    private String matricula;
 
   /*  @OneToMany(fetch = FetchType.LAZY, mappedBy = "odontologo",
             cascade = CascadeType.ALL)

@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.spec.OAEPParameterSpec;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -37,10 +38,23 @@ public class OdontologoServiceOrm {
         if (!id.equals(null)) {
             resultado = odontologoRepository.findById(id);
         } else{
-            throw new ResourceNotFoundException("No existe un turno con el id: " + id);
+            throw new ResourceNotFoundException("No existe un odontologo con el id: " + id);
         }
         return resultado;
     }
+
+    public Optional<Odontologo> buscarPorMatricula(String matricula) throws ResourceNotFoundException {
+       Optional<Odontologo> resultado = null;
+
+        if(!matricula.equals(null)){
+            resultado = odontologoRepository.buscarPorMatricula(matricula);
+        }
+        else{
+            throw new ResourceNotFoundException("No existe un odontologo con la matricula: " + matricula);
+        }
+        return resultado;
+    }
+
 
     public boolean eliminar(Long id) throws ResourceNotFoundException {
         if (odontologoRepository.findById(id).isPresent()) {

@@ -6,6 +6,7 @@ import com.example.clinicaOdontologica.persistance.entity.Paciente;
 import com.example.clinicaOdontologica.persistance.repository.IPacienteRepository;
 import org.springframework.stereotype.Service;
 
+import java.awt.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,8 +32,11 @@ public class PacienteServiceOrm {
         return new Paciente();
     }
     public Optional<Paciente> buscarPorId(Long id) {
-
         return pacienteRepository.findById(id);
+    }
+
+    public Optional<Paciente> buscarPorNombre(String nombre){
+        return  pacienteRepository.buscarPorNombre(nombre);
     }
 
     public boolean eliminar(Long id) throws ResourceNotFoundException {
