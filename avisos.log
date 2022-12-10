@@ -66,3 +66,5 @@ SELECT * FROM odontologos [42104-214]
 UPDATE odontologos SET matricula= ? WHERE id =? [42104-214]
 [2022-11-10 17:41:00] [ ERROR] [OdontologoDaoH2:77] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 SELECT * FROM odontologos WHERE id = ? [42104-214]
+[2022-12-09 18:48:26] [ INFO ] [OdontologoServiceOrm:41] Se agrego con exito el turno
+[2022-12-09 18:48:26] [ INFO ] [OdontologoServiceOrm:51] Se agrego correctamente el turno

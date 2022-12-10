@@ -1,6 +1,7 @@
 package com.example.clinicaOdontologica.service.orm;
 
 
+
 import com.example.clinicaOdontologica.exceptions.BadDateRequestException;
 import com.example.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.example.clinicaOdontologica.model.TurnoDto;
@@ -11,11 +12,18 @@ import com.example.clinicaOdontologica.persistance.repository.IPacienteRepositor
 import com.example.clinicaOdontologica.persistance.repository.ITurnoRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import lombok.Setter;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import java.util.*;
 
+
+
+
+@Setter
 @Service
 public class TurnoServiceOrm {
     private final ITurnoRepository turnoRepository;
@@ -23,10 +31,9 @@ public class TurnoServiceOrm {
     @Autowired
     ObjectMapper mapper;
 
+    private static final Logger logger = Logger.getLogger(OdontologoServiceOrm.class);
 
-/*    @Autowired
-    private MapperConfig mMapper;*/
-
+    @Autowired
     public TurnoServiceOrm(ITurnoRepository turnoRepository, IOdontologoRepository odontologoRepository, IPacienteRepository pacienteRepository) {
         this.turnoRepository = turnoRepository;
     }
@@ -35,12 +42,17 @@ public class TurnoServiceOrm {
         List<Turno> turnos = turnoRepository.findAll();
         Turno t = mapper.convertValue(turnoNuevo, Turno.class);
 
+
         for(Turno turno: turnos){
             if (t.getFechaTurno().equals(turno.getFechaTurno())) {
+                logger.error("No se pueden agendar dos turnos con la misma fecha");
                 throw new BadDateRequestException("No se pueden agendar dos turnos con la misma fecha");
+
             }
         }
         turnoRepository.save(t);
+        logger.info("Se agrego correctamente el turno");
+
         return turnoNuevo;
     }
 
@@ -65,10 +77,26 @@ public class TurnoServiceOrm {
         TurnoDto turnoDtoId = null;
         if (t.isPresent()) {
             turnoDtoId = mapper.convertValue(t, TurnoDto.class);
-        } else{
+
+               } else{
             throw new ResourceNotFoundException("No existe un turno con el id: "+id);
         }
         return turnoDtoId;
+    }
+
+    public Set<TurnoDto> buscarPorFecha(Date fechaTurno)throws ResourceNotFoundException{
+        List<Turno> turnos = turnoRepository.buscarPorFecha(fechaTurno);
+        Set<TurnoDto> turnosDto = new HashSet<>();
+
+        if(!turnos.isEmpty()){
+            for (Turno t : turnos) {
+                turnosDto.add(mapper.convertValue(t, TurnoDto.class));
+
+            }} else{
+            throw new ResourceNotFoundException("No se encuentran turnos");
+        }
+
+        return turnosDto;
     }
 
     public boolean eliminar(Long id) throws ResourceNotFoundException {

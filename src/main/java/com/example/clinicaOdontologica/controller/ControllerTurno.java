@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Set;
 
 @SpringBootApplication
@@ -33,6 +35,14 @@ public class ControllerTurno {
         return null;
     }
 
+
+    @GetMapping("/buscarPorFecha")
+    private Set<TurnoDto> buscar(@RequestParam("fechaTurno") Date fechaTurno) throws ResourceNotFoundException{
+        if (fechaTurno != null) {
+            return serviceTurno.buscarPorFecha(fechaTurno);
+        }
+        return null;
+    }
     @GetMapping(value = "/todos", produces = "application/json")
     public Set<TurnoDto> listar() throws ResourceNotFoundException {
         return serviceTurno.listar();
